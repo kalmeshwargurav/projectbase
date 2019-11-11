@@ -19,7 +19,9 @@ public abstract class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.setContentView(this.onCreateView());
         this.preInitializeMethod();
+        setToolbar();
         this.initUI();
+        setColorTheme();
         this.postInitializeMethod();
     }
 
