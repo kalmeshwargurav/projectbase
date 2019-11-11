@@ -16,15 +16,27 @@ public class Validator {
         return validator == null ? (validator = new Validator()) : validator;
     }
 
-    public boolean isNotEmpty(String string) {
-        return !TextUtils.isEmpty(string);
-    }
-
-    public boolean isSmallerThan(String string, int length) {
-        return string.length() < length;
+    public boolean isNotEmpty(String value) {
+        return !TextUtils.isEmpty(value);
     }
 
     public boolean isValidEmail(String str_email) {
         return Patterns.EMAIL_ADDRESS.matcher(str_email).matches();
+    }
+
+    public boolean isContainsDigits(String value) {
+        return TextUtils.isDigitsOnly(value);
+    }
+
+    public boolean hasLength(String value, int length) {
+        return value.length() == length;
+    }
+
+    public boolean isLessThan(String value, int length) {
+        return value.length() < length;
+    }
+
+    public boolean isGreaterThan(String value, int length) {
+        return value.length() > length;
     }
 }

@@ -6,10 +6,10 @@ import android.content.SharedPreferences;
 public class SharedPreferencesUtility {
     private SharedPreferences sharedPref;
     private SharedPreferences.Editor editor;
-    public static String ZWING_APP_NAME = "zwing_app_name";
+    public static String PREF_NAME = "pref_kalmesh";
 
     public SharedPreferencesUtility(Context context) {
-        this.sharedPref = context.getSharedPreferences(ZWING_APP_NAME, 0);
+        this.sharedPref = context.getSharedPreferences(PREF_NAME, 0);
     }
 
     public void setString(String key, String value) {
