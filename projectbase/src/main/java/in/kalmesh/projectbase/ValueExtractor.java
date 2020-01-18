@@ -17,8 +17,12 @@ public class ValueExtractor {
         return bundle != null;
     }
 
+    public boolean containsKey(String key) {
+        return bundle.containsKey(key);
+    }
+
     private boolean checkConditions(String key) {
-        return (isNotNull() && bundle.containsKey(key));
+        return (isNotNull() && containsKey(key));
     }
 
     public String getValue(String key, String defaultValue) {
@@ -32,6 +36,4 @@ public class ValueExtractor {
     public boolean getValue(String key, boolean defaultValue) {
         return checkConditions(key) ? bundle.getBoolean(key) : defaultValue;
     }
-
-
 }
