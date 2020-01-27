@@ -45,12 +45,12 @@ public class Validator {
         return value.length() > length;
     }
 
-    public String checkEmpty(String value, int returnDefaultValue) {
-        return isNotEmpty(value) ? value : String.valueOf(returnDefaultValue);
+    public int checkEmpty(String value, int returnDefaultValue) {
+        return isNotEmpty(value) ? Integer.parseInt(value) : returnDefaultValue;
     }
 
-    public String checkEmpty(String value, double returnDefaultValue) {
-        return isNotEmpty(value) ? value : String.valueOf(returnDefaultValue);
+    public double checkEmpty(String value, double returnDefaultValue) {
+        return isNotEmpty(value) ? Double.parseDouble(value) : returnDefaultValue;
     }
 
     public String checkEmpty(String value, String returnDefaultValue) {
