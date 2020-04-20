@@ -1,0 +1,4 @@
+#Mon Mar 16 12:12:44 IST 2020
+base.0=/media/kalmesh/Work/Kalmesh/developer_projects/Androidlibrary/app/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
