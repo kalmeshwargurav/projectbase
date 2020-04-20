@@ -19,13 +19,13 @@ public abstract class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.setContentView(this.onCreateView());
         this.preInitializeMethod();
-        setToolbar();
+        this.setToolbar();
         this.initUI();
-        setColorTheme();
+        this.setColorTheme();
         this.postInitializeMethod();
     }
 
-    public abstract int onCreateView();
+    protected abstract int onCreateView();
 
     protected abstract void preInitializeMethod();
 

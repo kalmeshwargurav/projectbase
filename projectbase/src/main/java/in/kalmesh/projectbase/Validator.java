@@ -3,8 +3,6 @@ package in.kalmesh.projectbase;
 import android.text.TextUtils;
 import android.util.Patterns;
 
-import java.util.ArrayList;
-
 /**
  * Created by Kalmeshwar on 18 Jan 2020 at 18:22.
  */

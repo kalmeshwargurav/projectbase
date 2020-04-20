@@ -39,7 +39,7 @@ public abstract class AppFragment extends Fragment {
         this.postInitializeMethod();
     }
 
-    public abstract int onCreateView();
+    protected abstract int onCreateView();
 
     protected abstract void preInitializeMethod();
 
