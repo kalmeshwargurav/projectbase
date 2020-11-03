@@ -12,9 +12,6 @@ public class Validator {
     private Validator() {
     }
 
-    private Validator(String value) {
-    }
-
     public static Validator getInstance() {
         return validator == null ? (validator = new Validator()) : validator;
     }
@@ -53,5 +50,17 @@ public class Validator {
 
     public String checkEmpty(String value, String returnDefaultValue) {
         return isNotEmpty(value) ? value : String.valueOf(returnDefaultValue);
+    }
+
+    public String hasValueAfterDecimal(double dValue) {
+        String returnValue = "0";
+        if ((dValue == Math.floor(dValue)) && !Double.isInfinite(dValue)) {
+            String strQty = String.valueOf(dValue);
+            returnValue = strQty.substring(0, strQty.lastIndexOf('.'));
+        } else {
+            returnValue = String.valueOf(dValue);
+        }
+
+        return returnValue;
     }
 }

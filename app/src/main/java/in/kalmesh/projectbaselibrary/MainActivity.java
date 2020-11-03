@@ -14,6 +14,7 @@ import java.util.List;
 
 import in.kalmesh.projectbase.AppActivity;
 import in.kalmesh.projectbase.Debug;
+import in.kalmesh.projectbase.DecimalFormatter;
 import in.kalmesh.projectbase.SharedPreferencesUtility;
 import in.kalmesh.projectbase.Validator;
 import in.kalmesh.projectbase.ValueExtractor;
@@ -42,6 +43,13 @@ public class MainActivity extends AppActivity {
         checkPermissions(MainActivity.this,
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
                         Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
+
+        String value2 = new DecimalFormatter().format("112.123");
+        String value21 = new DecimalFormatter(2).format("112.1234");
+        String value3 = new DecimalFormatter(3).format("112.1234");
+        String value4 = new DecimalFormatter(-1).format("112.1234");
+
+        Debug.printLogError(TAG, "preInitializeMethod: " + value2 + "\n" + value21 + "\n" + value3+"\n"+value4, false);
     }
 
     public boolean checkPermissions(Activity act, String[] permissionName, int request_code) {
