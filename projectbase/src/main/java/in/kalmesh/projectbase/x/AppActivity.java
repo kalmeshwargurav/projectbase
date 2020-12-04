@@ -1,17 +1,11 @@
-package in.kalmesh.projectbase;
+package in.kalmesh.projectbase.x;
 
-import android.app.ProgressDialog;
 import android.arch.lifecycle.Observer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import in.kalmesh.projectbase.x.ConnectionLiveData;
-import in.kalmesh.projectbase.x.ConnectionModel;
-
 public abstract class AppActivity extends AppCompatActivity {
-    private ProgressDialog pDialog = null;
-
     public AppActivity() {
     }
 
@@ -23,7 +17,6 @@ public abstract class AppActivity extends AppCompatActivity {
         this.initUI();
         this.setColorTheme();
         this.postInitializeMethod();
-
         networkStatus();
     }
 
@@ -59,24 +52,5 @@ public abstract class AppActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    protected void showDialog(boolean setCancelable) {
-        if (pDialog == null || !pDialog.isShowing()) {
-            pDialog = new ProgressDialog(AppActivity.this);
-            pDialog.setMessage("Please wait...");
-            pDialog.setIndeterminate(false);
-            pDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            pDialog.setCancelable(setCancelable);
-            if (!isFinishing())
-                pDialog.show();
-        }
-    }
-
-    protected void hideDialog() {
-        if (pDialog != null && pDialog.isShowing()) {
-            if (!isFinishing())
-                pDialog.dismiss();
-        }
     }
 }

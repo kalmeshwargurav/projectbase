@@ -3,21 +3,19 @@ package in.kalmesh.projectbaselibrary;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.icu.lang.UScript;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import in.kalmesh.projectbase.AppActivity;
 import in.kalmesh.projectbase.Debug;
 import in.kalmesh.projectbase.DecimalFormatter;
 import in.kalmesh.projectbase.SharedPreferencesUtility;
 import in.kalmesh.projectbase.Validator;
 import in.kalmesh.projectbase.ValueExtractor;
+import in.kalmesh.projectbase.x.AppActivity;
 
 public class MainActivity extends AppActivity {
     private final String TAG = MainActivity.class.getSimpleName();
@@ -49,7 +47,7 @@ public class MainActivity extends AppActivity {
         String value3 = new DecimalFormatter(3).format("112.1234");
         String value4 = new DecimalFormatter(-1).format("112.1234");
 
-        Debug.printLogError(TAG, "preInitializeMethod: " + value2 + "\n" + value21 + "\n" + value3+"\n"+value4, false);
+        Debug.printLogError(TAG, "preInitializeMethod: " + value2 + "\n" + value21 + "\n" + value3 + "\n" + value4, false);
     }
 
     public boolean checkPermissions(Activity act, String[] permissionName, int request_code) {
