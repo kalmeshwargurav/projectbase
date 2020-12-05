@@ -1,4 +1,4 @@
-package in.kalmesh.projectbase;
+package in.kalmesh.projectbase.x;
 
 import android.app.ProgressDialog;
 import android.arch.lifecycle.Observer;
@@ -12,9 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.Objects;
-
-import in.kalmesh.projectbase.x.ConnectionLiveData;
-import in.kalmesh.projectbase.x.ConnectionModel;
 
 public abstract class AppFragment extends Fragment {
     private ProgressDialog pDialog = null;
