@@ -13,33 +13,45 @@ public class SharedPreferencesUtility {
     }
 
     public void setString(String key, String value) {
-        this.editor = this.sharedPref.edit();
-        this.editor.putString(key, value);
-        this.editor.apply();
+        synchronized (this) {
+            this.editor = this.sharedPref.edit();
+            this.editor.putString(key, value);
+            this.editor.apply();
+        }
     }
 
     public String getString(String key, String defaultVal) {
-        return this.sharedPref.getString(key, defaultVal);
+        synchronized (this) {
+            return this.sharedPref.getString(key, defaultVal);
+        }
     }
 
     public void setBoolean(String key, boolean value) {
-        this.editor = this.sharedPref.edit();
-        this.editor.putBoolean(key, value);
-        this.editor.apply();
+        synchronized (this) {
+            this.editor = this.sharedPref.edit();
+            this.editor.putBoolean(key, value);
+            this.editor.apply();
+        }
     }
 
     public boolean getBoolean(String key, boolean defaultVal) {
-        return this.sharedPref.getBoolean(key, defaultVal);
+        synchronized (this) {
+            return this.sharedPref.getBoolean(key, defaultVal);
+        }
     }
 
     public void setInteger(String key, int value) {
-        this.editor = this.sharedPref.edit();
-        this.editor.putInt(key, value);
-        this.editor.apply();
+        synchronized (this) {
+            this.editor = this.sharedPref.edit();
+            this.editor.putInt(key, value);
+            this.editor.apply();
+        }
     }
 
     public int getInteger(String key, int defaultVal) {
-        return this.sharedPref.getInt(key, defaultVal);
+        synchronized (this) {
+            return this.sharedPref.getInt(key, defaultVal);
+        }
     }
 
     public void clearStoredValues() {
