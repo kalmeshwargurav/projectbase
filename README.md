@@ -20,7 +20,7 @@ allprojects {
 **Step 2.** Add the dependency
 ```java
 dependencies {
-	implementation 'com.github.kalmeshwargurav:projectbase:1.0.05'
+	implementation 'com.github.kalmeshwargurav:projectbase:jitpack_version'
 }
 ```
 ## Usage
