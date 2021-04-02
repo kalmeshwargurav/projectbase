@@ -1,4 +1,4 @@
-# projectbase [![](https://jitpack.io/v/kalmeshwargurav/projectbase.svg)]
+# projectbase (https://jitpack.io/v/kalmeshwargurav/projectbase.svg)
 
 
 **projectbase** is a library which contains basic classes which can be used to *Maintain your code*, *Reduce code*, *Ready made methods for validations and Sharedpreferences*
