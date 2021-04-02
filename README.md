@@ -26,4 +26,4 @@ dependencies {
 ## Usage
 
 *For uses of this library please check
-[MainActivity](https://github.com/kalmeshwargurav/projectbase/blob/master/app/src/main/java/in/kalmesh/projectbaselibrary/MainActivity.java) (we will add proper documentation soon till refer MainActivity)*
+[MainActivity](https://github.com/kalmeshwargurav/projectbase/blob/master/app/src/main/java/in/kalmesh/projectbaselibrary/MainActivity.java) (we will add proper documentation soon, till refer MainActivity)*
